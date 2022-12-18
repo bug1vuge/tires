@@ -156,6 +156,10 @@
         cursor: pointer;
     }
 
+    .footer__item.isActive .footer__item-title .-js-showElemIcon{
+        transform: rotate(180deg);
+    }
+
     .footer__item:nth-child(2) {
         margin: 0;
     }
