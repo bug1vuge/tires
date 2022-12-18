@@ -792,6 +792,10 @@
     .header__info-workingDays {
         font-size: 12px;
     }
+
+    .burgerMenu {
+        top: 100px;
+    }
 }
 
 @media(max-width: 475px) {
@@ -834,5 +838,8 @@
         width: 34px;
         height: 34px;
     }
-}
 
+    .burgerMenu{
+        top: 85px;
+    }
+}
