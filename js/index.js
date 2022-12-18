@@ -268,13 +268,29 @@ const selectModule = () => {
     selectBlocks.forEach(selectBlock => {
         selectBlock.addEventListener('click', (e) => {
 
+            const parent = findAncestor(selectBlock, 'selectionItem')
             const triggerText = selectBlock.querySelector('.selectionForm__selectTrigger-text')
             const trigger = selectBlock.querySelector('.selectionForm__selectTrigger')
+            const triggers = parent.querySelectorAll('.selectionForm__selectTrigger')
             const list = selectBlock.querySelector('.selectionForm__selectList')
+            const lists = parent.querySelectorAll('.selectionForm__selectList')
             const items = selectBlock.querySelectorAll('.selectionForm__selectItem')
             const target = e.target
 
+            function findAncestor (el, cls) {
+                while ((el = el.parentElement) && !el.classList.contains(cls));
+                return el;
+            }
+
+
             if (target.closest('.selectionForm__selectTrigger')) {
+                triggers.forEach(el => {
+                    el.classList.remove('active')
+                })
+
+                lists.forEach(el => {
+                    el.classList.remove('visible')
+                })
                 trigger.classList.toggle('active')
                 list.classList.toggle('visible')
             }
