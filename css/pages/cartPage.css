@@ -1,0 +1,233 @@
+.cart{
+    margin-bottom: 130px;
+}
+
+.cartInfo{
+    margin-bottom: 80px;
+}
+
+.cartInfo__titles{
+    display: grid;
+    grid-template-columns: 150px 1fr 150px 120px 150px;
+    align-items: center;
+    grid-gap: 0 40px;
+
+    padding-bottom: 10px;
+    border-bottom: 1px solid #C9C9C9;
+
+}
+
+.cartInfo__title:nth-child(3) {
+    display: none;
+}
+
+.cartInfo__title:nth-child(4),
+.cartInfo__title:nth-child(6) {
+    padding-left: 30px;    
+    min-width: 120px;
+}
+
+.cartInfo__title:nth-child(5){
+    min-width: 120px;
+}
+
+.cartInfo__contentItem:nth-child(3){
+    display: none;
+}
+
+.cartInfo__contentItem:nth-child(4),
+.cartInfo__contentItem:nth-child(5),
+.cartInfo__contentItem:nth-child(6){
+    text-align: center;
+    min-width: 120px;
+}
+
+.cartInfo__content{
+    display: grid;
+    grid-template-columns: 150px 1fr 150px 120px 150px;
+    align-items: center;
+    grid-gap: 0 40px;
+    padding: 30px 0;
+    border-bottom: 1px solid #C9C9C9;
+}
+
+.cartInfo__contentItem-title{
+    display: none;
+}
+
+.cartInfo__productImage img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cartInfo__productTitle{
+    font-size: 18px;
+    text-decoration-line: underline;
+    color: #112120;
+}
+
+.cartInfo__productPrice{
+    font-weight: 500;
+    font-size: 24px;
+    color: #112120;
+}
+
+.cartInfo__totalWrap{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 75px 0;
+    border-bottom: 1px solid #C9C9C9;
+}
+
+.cartInfo__total{
+    display: flex;
+    align-items: center;
+    gap: 0 100px;
+    margin-right: 35px;
+}
+
+.cartInfo__resetCart{
+    font-size: 22px;
+    text-decoration-line: underline;
+    color: #112120;
+}
+
+.cartInfo__totalTitle{
+    font-weight: 500;
+    font-size: 22px;
+    color: #112120;
+}
+
+
+@media(max-width: 1024px) {
+    .cartInfo__content,
+    .cartInfo__titles{
+        grid-gap: 0 20px;
+        grid-template-columns: 130px 1fr 120px 120px 120px;
+    }
+
+    .cartInfo__total{
+        margin-right: 23px;
+    }
+}
+
+@media(max-width: 768px) {
+    .cartInfo__titles{
+        display: none;
+    }
+
+    .cartInfo__content{
+        border-top: 1px solid #C9C9C9;
+        padding: 25px 0;
+        grid-template-columns: 100px 1fr 1fr 1fr;
+        grid-gap: 20px;
+    }
+
+    .cartInfo__contentItem:nth-child(2){
+        grid-column: span 3;
+    }
+
+    .cartInfo__contentItem:nth-child(3){
+        display: block;
+        min-width: 50px;
+        flex-shrink: 1;
+    }
+
+    .cartInfo__contentItem:nth-child(4), .cartInfo__contentItem:nth-child(6) {
+        min-width: 0;
+    }
+
+    .cartInfo__contentItem .productCounter{
+        margin: 0 auto;
+    }
+
+    .cartInfo__resetButton{
+        display: inline-block;
+        margin-bottom: 20px;
+    }
+
+    .cartInfo__totalWrap{
+        padding: 50px 0;
+    }
+
+    .cartInfo__resetCart{
+        font-size: 20px;
+    }
+
+    .cartInfo__totalTitle{
+        font-size: 20px;
+    }
+
+    .cartInfo__productPrice{
+        font-size: 22px;
+    }
+
+    .cartInfo__contentItem-title{
+        display: block;
+        font-size: 10px;
+        color: #9C9C9C;
+        margin-top: 14px;
+    }
+
+    .cartInfo__contentItem:nth-child(5) .cartInfo__contentItem-title{
+        margin-top: 0;
+    }
+
+    .cartInfo__productTitle{
+        font-size: 16px;
+    }
+
+    .cartInfo__total{
+        margin-right: 0;
+        gap: 0 20px;
+    }
+
+    .cartInfo__resetCart,
+    .cartInfo__totalTitle{
+        font-size: 16px;
+    }
+
+    .cartInfo__productPrice{
+        font-size: 18px;
+    }
+}
+
+@media(max-width: 500px) {
+    .cartInfo__content{
+        grid-template-columns: 70px 1fr 1fr 1fr;
+        grid-gap: 15px 10px;
+    }
+
+    .cartInfo__productTitle{
+        font-size: 14px;
+    }
+
+    .cartInfo__totalWrap{
+        padding: 20px 0;
+    }
+    
+    .cartInfo__resetCart, .cartInfo__totalTitle{
+        font-size: 14px;
+    }
+
+    .cartInfo__productPrice{
+        font-size: 16px;
+    }
+
+    .cartInfo__totalTitle{
+        width: 55px;
+    }
+
+    .cartInfo__resetCart{
+        width: 77px;
+    }
+
+    .cartInfo__contentItem:nth-child(5){
+        min-width: 100px;
+    }
+}
+
+

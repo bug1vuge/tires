@@ -1,0 +1,59 @@
+@import './assets/fonts.css';
+@import './assets/reset.css';
+@import './assets/global.css';
+
+/* components */
+@import './components/header.css';
+@import './components/footer.css';
+@import './components/breadcrums.css';
+@import './components/selection.css';
+@import './components/catalogeFilter.css';
+@import './components/product.css';
+@import './components/pagination.css';
+@import './components/orderForm.css';
+/*  */
+
+/* pages */
+@import './pages/mainPage.css';
+@import './pages/catalogePage.css';
+@import './pages/productPage.css';
+@import './pages/companyPage.css';
+@import './pages/cartPage.css';
+@import './pages/errorPage.css';
+@import './pages/searchResultsPage.css';
+@import './pages/brandsPage.css';
+/*  */
+
+/* sliders */
+@import './sliders/productsSlider.css';
+@import './sliders/offerSlider.css';
+@import './sliders/brandsSlider.css';
+/*  */
+
+/* modals */
+@import './modals/callbackModal.css';
+@import './modals/gratitudeModal.css';
+/*  */
+
+
+/* pages nav */
+.pages-nav{
+    padding-top: 30px;
+}
+
+.pages-nav__item{
+    margin-bottom: 15px;
+}
+
+.pages-nav__link{
+    color: #333;
+    font-size: 20px;
+    font-weight: 500;
+    transition: all .3s ease;
+}
+
+.pages-nav__link:hover{
+    color: #00bbff;
+    transition: all .3s ease;
+}
+/*  */

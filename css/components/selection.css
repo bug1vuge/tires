@@ -1,0 +1,734 @@
+.selection {
+    margin-bottom: 40px;
+}
+
+.selectionItems {
+    display: flex;
+    align-items: center;
+    gap: 0 30px;
+}
+
+.selectionItem {
+    max-width: 685px;
+    width: 100%;
+    height: 400px;
+
+    padding: 25px 35px 30px 35px;
+    border: 1px solid #E3E3E3;
+    border-radius: 3px;
+}
+
+.selectionItem.-tire-bg {
+    background-image: url('../../images/selection/bg1.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom left;
+}
+
+.selectionItem.-disk-bg {
+    background-image: url('../../images/selection/bg2.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom right;
+}
+
+.cataloge .selectionItem.-disk-bg {
+    background-image: url('../../images/selection/bg3.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom left;
+}
+
+.selectionItem.-car-bg{
+    background-image: url('../../images/selection/bg4.png');
+    background-repeat: no-repeat;
+    background-size: 50%;
+    background-position: bottom right;
+}
+
+.selectionItem__container{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+
+.selectionItem__title{
+    font-weight: 500;
+    font-size: 24px;
+    letter-spacing: -0.05em;
+    color: #000000;
+}
+
+.selectionItem__tabsButtons{
+    display: flex;
+    align-items: center;
+    gap: 0 10px;
+}
+
+.selectionItem__tabsButton{
+    position: relative;
+    padding-bottom: 10px;
+    font-weight: 500;
+    font-size: 15px;
+    letter-spacing: -0.05em;
+    color: #112120;
+    cursor: pointer;
+}
+
+.selectionItem__tabsButton.isActive{
+    color: #1F5E37;
+}
+
+.selectionItem__tabsButton.isActive::after{
+    content: '';
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+    height: 1px;
+
+    background: #1F5E37;
+}
+
+.selectionItem__tabsContent{
+    display: none;
+}
+
+.selectionItem__tabsContent.isActive{
+    display: block;
+}
+
+.selectionItem__selects{
+    margin-bottom: 58px;
+}
+
+.selectionItem__selectsRow{
+    display: flex;
+    align-items: flex-end;
+    gap: 0 44px;
+    margin-bottom: 22px;
+}
+
+
+.selectionItem.-tire-bg .selectionItem__tabsContent:nth-child(1) .selectionItem__selectsRow:nth-child(2) {
+    margin-bottom: 33px;
+}
+
+.selectionItem__selectsRow:last-child{
+    margin-bottom: 0;
+}
+
+.selectionItem.-tire-bg .selectionItem__tabsContent:nth-child(1) .selectionItem__selectsRow:nth-child(2) .selectionForm__selectWrap{
+    margin-left: auto;
+}
+
+.selectionItem__tabsContent:nth-child(1)  .selectionItem__selectsRow:nth-child(3) .selectionForm__checkboxLabel{
+    margin-left: auto;
+}
+
+.cataloge .selectionItem__tabsContent:nth-child(1)  .selectionItem__selectsRow:nth-child(3) .selectionForm__selectWrap{
+    margin-left: auto;
+}
+
+.selectionItem.-disk-bg .selectionItem__tabsContent:nth-child(1)  .selectionItem__selects{
+    margin-bottom: 31px;
+}
+
+.selectionItem__tabsContent:nth-child(2) .selectionForm__submitButtonWrap{
+    justify-content: flex-start;
+}
+
+.cataloge .selectionItem.-car-bg .selectionItem__tabsContent .selectionForm__submitButtonWrap{
+    justify-content: flex-start;
+}
+
+.selectionItem .selectionItem__tabsContent:nth-child(2) .selectionItem__selectsRow .selectionForm__selectWrap{
+    min-width: 150px;
+}
+
+.cataloge .selectionItem.-car-bg .selectionItem__tabsContent .selectionItem__selectsRow .selectionForm__selectWrap{
+    min-width: 150px;
+}
+
+.selectionItem .selectionItem__tabsContent:nth-child(2) .selectionItem__selects{
+    margin-bottom: 106px;
+}
+
+.cataloge .selectionItem .selectionItem__tabsContent .selectionItem__selects{
+    margin-bottom: 110px;
+}
+
+.selectionForm__selectWrap{
+    position: relative;
+    width: 120px;
+}
+
+.selectionForm__selectWrap::after {
+    font-weight: 700;
+    font-size: 16px;
+    letter-spacing: -0.05em;
+    color: #DFDFDF;
+
+    position: absolute;
+
+    top: 30px;
+    right: -25px;
+}
+
+.selectionForm__selectWrap.-slash-decor::after{
+    content: '/';
+}
+.selectionForm__selectWrap.-x-decor::after{
+    content: 'X';
+}
+.selectionForm__selectWrap.-r-decor::after{
+    content: 'R';
+}
+
+.selectionForm__selectTitle{
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: -0.05em;
+    color: #112120;
+
+    margin-bottom: 8px;
+}
+
+.selectionForm__select {
+    width: 100%;
+}
+
+.selectionForm__selectTrigger {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 100%;
+    height: 32px;
+
+    background: #F5F5F5;
+    border: 1px solid #DFDFDF;
+    border-radius: 2px;
+    padding-left: 12px;
+    cursor: pointer;
+}
+
+.selectionForm__selectTrigger.active .selectionForm__selectTrigger-icon svg{
+    transform: rotate(180deg);
+}
+
+.selectionForm__selectTrigger-text {
+    font-weight: 500;
+    font-size: 12px;
+    letter-spacing: -0.05em;
+    color: #112120;
+}
+
+.selectionForm__selectTrigger-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 100%;
+    width: 27px;
+    background: #fff;
+    border-left: 1px solid #DFDFDF;
+}
+
+
+.selectionForm__selectList{
+    background: #FFFFFF;
+    border: 1px solid #DFDFDF;
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.04);
+    border-radius: 2px;
+    padding: 10px 0 20px;
+
+    max-height: 200px;
+
+    display: none;
+
+    position: absolute;
+    width: 100%;
+    z-index: 2;
+    top: 55px;
+    left: 0;
+}
+
+.selectionForm__selectList.visible{
+    display: block;
+}
+
+.selectionForm__selectItem{
+    display: flex;
+    align-items: center;
+    height: 24px;
+    padding-left: 14px;
+
+    font-size: 12px;
+    color: #112120;
+    transition: all .4s ease;
+    cursor: pointer;
+}
+
+.selectionForm__selectItem:hover {
+    background: #F5F5F5;
+    color: #1F5E37;
+    transition: all .4s ease;
+}
+
+.selectionForm__selectItem.isActive{
+    position: relative;
+    font-weight: 500;
+}
+
+.selectionForm__selectItem.isActive::before{
+    content: url('../../images/icons/tick.svg');
+    position: absolute;
+    left: 5px;
+    top: 3px;
+}
+
+.selectionForm .simplebar-track.simplebar-vertical{
+    width: 2px;
+    background: #EBEBEB;
+    border-radius: 2px;
+}
+
+.selectionForm .simplebar-scrollbar:before{
+    opacity: 1;
+    width: 2px;
+    background: #1F5E37;
+    border-radius: 2px;
+
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.selectionForm__checkboxLabel {
+    display: flex;
+    align-items: flex-end;
+    gap: 0 12px;
+    cursor: pointer;
+    min-width: 120px;
+}
+
+.selectionFrom__checkboxInput {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+}
+
+.selectionFrom__checkboxInput:checked+.selectionForm__checkboxIcon {
+    background: #1F5E37;
+}
+
+.selectionForm__checkboxIcon {
+    display: block;
+
+    width: 16px;
+    height: 16px;
+
+    background: #FFFFFF;
+    border: 1px solid #DFDFDF;
+
+    position: relative;
+}
+
+.selectionForm__checkboxText {
+    font-weight: 500;
+    font-size: 12px;
+    letter-spacing: -0.05em;
+    color: #112120;
+
+}
+
+.selectionForm__submitButtonWrap{
+    margin-top: auto;
+}
+
+.selectionForm__submitButtonWrap {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: auto;
+}
+
+.selectionForm__submitButton {
+    display: block;
+    width: 185px;
+    height: 46px;
+
+    background: #1F5E37;
+    border-radius: 3px;
+    padding: 0;
+    outline: none;
+    border: none;
+    cursor: pointer;
+
+    font-weight: 600;
+    font-size: 16px;
+    color: #FFFFFF;
+    transition: all .4s ease;
+}
+
+.selectionForm__submitButton:hover {
+    background: #428E5F;
+    transition: all .4s ease;
+}
+
+.selectionForm__inputWrap{
+    width: 120px;
+    position: relative;
+}
+
+.selectionForm__inputWrap.-dash-decor::after{
+    font-weight: 700;
+    font-size: 16px;
+    letter-spacing: -0.05em;
+    color: #DFDFDF;
+
+    content: '--';
+    position: absolute;
+
+    top: 30px;
+    right: -25px;
+}
+
+.selectionForm__inputTitle {
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: -0.05em;
+    color: #112120;
+
+    margin-bottom: 7px;
+}
+
+.selectionForm__input {
+    height: 32px;
+    width: 100%;
+
+    padding: 0 5px;
+    background: #F5F5F5;
+    border: 1px solid #DFDFDF;
+    border-radius: 2px;
+
+    outline: none;
+    cursor: pointer;
+
+    font-size: 14px;
+}
+
+.selectionItem__recommendsTabs-buttons{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+
+.selectionItem__recommendsTabs-button{
+    font-weight: 700;
+    font-size: 15px;
+    letter-spacing: -0.05em;
+    color: #112120;
+    position: relative;
+    padding-bottom: 10px;
+    cursor: pointer;
+}
+
+.selectionItem__recommendsTabs-button.isActive{
+    color: #1F5E37;
+}
+
+.selectionItem__recommendsTabs-button.isActive::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background:#1F5E37;
+}
+
+.selectionItem__recommendsTabs-content{
+    display: none;
+}
+
+.selectionItem__recommendsTabs-content.isActive{
+    display: block;
+}
+
+.selectionItem__recommendsWrap{
+    margin-bottom: 20px;
+}
+
+.selectionItem__recommendsContainer{
+    display: flex;
+    align-items: flex-start;
+    gap: 0 50px;
+}
+
+.selectionItem__recommendsWrap:last-child{
+    margin-bottom: 0;
+}
+
+.selectionItem__recommendsTitle{
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: -0.05em;
+    color: #112120;
+    margin-bottom: 15px;
+}
+
+.selectionItem__recommendsText{
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: -0.05em;
+    color: #112120;
+
+}
+
+.selectionItem__recommendsTagging{
+    font-size: 12px;
+    letter-spacing: -0.05em;
+    color: #999999;
+    margin-top: 1px;
+}
+
+.selectionItem__recommendsLinks{
+    display: flex;
+    align-items: center;
+    gap: 0 5px;
+}
+
+.selectionItem__recommendsLink{
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: -0.05em;
+    text-decoration-line: underline;
+    color: #112120;
+}
+
+.selectionItem__recommendsChanges{
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap:  25px;
+}
+
+.selectionItem__recommendsChange-radius{
+    font-weight: 700;
+    font-size: 16px;
+    letter-spacing: -0.05em;
+    color: #DFDFDF;
+    margin-bottom: 5px;
+}
+
+.selectionItem__recommendsChange-text{
+    font-size: 10px;
+    letter-spacing: -0.05em;
+    color: #999999;
+    margin-bottom: 5px;
+}
+
+.selectionItem__recommendsChange-title{
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: -0.05em;
+    text-decoration-line: underline;
+    color: #112120;
+}
+
+.-hideElement {
+    display: none;
+}
+
+@media(max-width: 1440px) {
+    .selectionItem{
+        padding-right: 25px;
+        padding-left: 25px;
+    }
+
+    .selectionItem.-tire-bg .selectionItem__selectsRow:nth-child(2),
+    .selectionItem.-tire-bg .selectionItem__selectsRow:nth-child(3){
+        display: none;
+    }
+
+    .selectionItem.-disk-bg .selectionItem__selectsRow:nth-child(2),
+    .selectionItem.-disk-bg .selectionItem__selectsRow:nth-child(3){
+        display: none;
+    }
+
+    .selectionItem.-car-bg .selectionItem__selectsRow:nth-child(2){
+        display: none;
+    }
+
+    .selectionItem__selectsRow{
+        flex-wrap: wrap;
+        gap: 22px 34px;
+        align-items: flex-end;
+        margin-bottom: 0;
+    }
+
+    .selectionItem__selects{
+        margin-bottom: 110px;    
+    }
+
+    .selectionForm__checkboxLabel{
+        min-width: 0;
+        margin-bottom: 10px;
+    }
+
+    .selectionForm__checkboxLabel.-hideElement {
+        display: flex;
+    }
+
+    .-hideElement{
+        display: block;
+    }
+
+    .selectionForm__selectWrap::after{
+        right: -21px;
+    }
+
+    .selectionForm__inputWrap.-dash-decor::after{
+        right: -21px;
+    }
+}
+
+@media(max-width: 1024px) {
+    .cataloge .selectionItem.-disk-bg{
+        background-size: 45%;
+    }
+
+    .selectionItem.-car-bg{
+        order: -1;
+    }
+
+    .selectionItems{
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 45px 0;
+    }
+
+    .selectionItem{
+        max-width: 100%;
+        height: auto;
+    }
+
+    .selectionItem.-car-bg{
+        background-size: 32%;
+    }
+
+    .selectionItem__selects{
+        margin-bottom: 60px;
+    }
+
+    .selectionItem .selectionItem__tabsContent:nth-child(2) .selectionItem__selects{
+        margin-bottom: 60px;
+    }
+
+    
+}
+
+@media(max-width: 768px) {
+    .selectionItem.-car-bg {
+        background-size: 50%;
+    }
+
+    .selectionItem__title{
+        font-size: 20px;
+    }
+
+    .selectionForm__submitButton{
+        font-size: 14px;
+    }
+
+    .selectionItem__tabsButton{
+        padding-bottom: 6px;
+    }
+}
+
+@media(max-width: 500px) {
+    .selectionItem{
+        border: none;
+        padding: 0;
+    }
+
+    .selectionItem.-tire-bg,
+    .selectionItem.-disk-bg,
+    .selectionItem.-car-bg,
+    .cataloge .selectionItem.-disk-bg{
+        background-image: none;
+    }
+
+    .selectionForm__selectWrap.-slash-decor::after,
+    .selectionForm__selectWrap.-r-decor::after,
+    .selectionForm__selectWrap.-x-decor::after{
+        content: none;
+    }
+
+    .selectionForm__inputWrap.-dash-decor::after{
+        content: '-';
+    }
+
+    .selectionItem__selectsRow{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 15px;
+    }
+
+    .selectionForm__selectWrap,
+    .selectionForm__inputWrap{
+        width: 100%;
+    }
+
+    .selectionForm__submitButtonWrap{
+        justify-content: center;
+    }
+
+    .selectionItem__tabsContent:nth-child(2) .selectionForm__submitButtonWrap{
+        justify-content: center;
+    }
+
+    .cataloge .selectionItem.-car-bg .selectionItem__tabsContent .selectionForm__submitButtonWrap{
+        justify-content: center;
+    }
+
+    .selectionItem__selects{
+        margin-bottom: 25px;
+    }
+
+    .selectionItem.-disk-bg .selectionItem__tabsContent:nth-child(1) .selectionItem__selects{
+        margin-bottom: 25px;
+    }
+
+    .selectionItem .selectionItem__tabsContent:nth-child(2) .selectionItem__selects{
+        margin-bottom: 25px;
+    }
+    .cataloge .selectionItem .selectionItem__tabsContent .selectionItem__selects{
+        margin-bottom: 25px;
+    }
+
+    .selectionItem__title{
+        font-size: 16px;
+    }
+
+    .selectionForm__inputWrap.-dash-decor::after{
+        right: -10px;
+    }
+
+    .selectionItem__tabsButton,
+    .selectionForm__selectTitle{
+        font-size: 12px;
+    }
+
+    .selectionItem__recommendsTabs-button{
+        font-size: 13px;
+    }
+}

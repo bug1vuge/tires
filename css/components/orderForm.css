@@ -1,0 +1,206 @@
+.orderFormWrap {
+    max-width: 430px;
+    width: 100%;
+}
+
+.orderForm__title {
+    font-weight: 500;
+    font-size: 24px;
+    color: #112120;
+    margin-bottom: 40px;
+}
+
+.orderForm__inputContainer {
+    margin-bottom: 40px;
+}
+
+.orderForm__blockTitle {
+    color: #112120;
+    margin-bottom: 10px;
+}
+
+.orderForm__inputWrap {
+    width: 100%;
+}
+
+.orderForm__input {
+    height: 40px;
+    width: 100%;
+
+    background: #FFFFFF;
+    border: 1px solid #E1E1E1;
+    outline: none;
+    cursor: pointer;
+    padding-left: 22px;
+
+    font-size: 15px;
+}
+
+.orderForm__input::placeholder {
+    font-size: 18px;
+    color: #B2B2B2;
+}
+
+.orderForm__addressContainer .orderForm__blockTitle {
+    margin-bottom: 22px;
+}
+
+.orderForm__addressContainer {
+    margin-bottom: 40px;
+}
+
+.orderForm__radioWrap {
+    display: flex;
+    align-items: center;
+    gap: 0 20px;
+    cursor: pointer;
+}
+
+.orderForm__radio {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+}
+
+.orderForm__radio:checked+.orderForm__radioIcon {
+    background: #1F5E37;
+}
+
+.orderForm__radioIcon {
+    display: block;
+    width: 16px;
+    height: 16px;
+    border: 1px solid #DFDFDF;
+    flex-shrink: 0;
+}
+
+.orderForm__radioText {
+    color: #112120;
+    font-size: 14px;
+}
+
+.orderForm__radioText span {
+    font-weight: 600;
+}
+
+.orderForm__enterCity {
+    display: flex;
+    align-items: center;
+    gap: 0 20px;
+    margin-top: 20px;
+}
+
+.orderForm__textareaContainer {
+    margin-bottom: 40px;
+}
+
+.orderForm__textarea {
+    width: 100%;
+    min-height: 150px;
+    resize: none;
+
+    background: #FFFFFF;
+    border: 1px solid #E1E1E1;
+    outline: none;
+    cursor: pointer;
+    padding: 13px 22px 0 22px;
+    font-size: 15px;
+}
+
+.orderForm__checkboxLabel {
+    display: flex;
+    align-items: center;
+    gap: 0 20px;
+    cursor: pointer;
+    margin-bottom: 30px;
+}
+
+.orderForm__checkbox {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+}
+
+.orderForm__checkbox:checked+.orderForm__checkboxIcon {
+    background: #1F5E37;
+}
+
+.orderForm__checkboxIcon {
+    display: block;
+    width: 16px;
+    height: 16px;
+    border: 1px solid #DFDFDF;
+    flex-shrink: 0;
+    margin-bottom: 1px;
+}
+
+.orderForm__checkboxText {
+    color: #8A8A8A;
+    font-size: 14px;
+    letter-spacing: -0.025em;
+}
+
+.orderForm__checkboxText a {
+    font-weight: 500;
+    text-decoration: underline;
+    color: inherit;
+}
+
+.orderForm__text {
+    letter-spacing: -0.025em;
+    color: #8A8A8A;
+
+    margin-bottom: 40px;
+}
+
+.orderForm__buttons {
+    display: flex;
+    align-items: center;
+    gap: 0 20px;
+}
+
+.orderForm__submitButton {
+    max-width: 240px;
+    width: 100%;
+    height: 45px;
+
+    outline: none;
+    cursor: pointer;
+    border: none;
+    background: #1F5E37;
+    border-radius: 3px;
+
+    font-weight: 600;
+    font-size: 16px;
+    color: #FFFFFF;
+}
+
+.orderForm__cancelButton {
+    height: 45px;
+    max-width: 160px;
+    width: 100%;
+
+    border: none;
+    background: transparent;
+    outline: none;
+    cursor: pointer;
+
+    font-weight: 600;
+    font-size: 16px;
+    color: #ACACAC;
+}
+
+@media(max-width: 768px) {
+    .orderForm__text{
+        font-size: 14px;
+    }
+
+    .orderForm__title{
+        font-size: 22px;
+        margin-bottom: 30px;
+    }
+}

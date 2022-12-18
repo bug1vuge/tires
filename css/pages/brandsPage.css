@@ -1,0 +1,35 @@
+.brandsCataloge{
+    margin-bottom: 80px;
+}
+
+.brandsCataloge .catalogeFilters{
+    margin-top: 0;
+}
+
+.brandsCataloge__items{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-gap: 65px;
+}
+
+
+@media(max-width: 1024px) {
+    .brandsCataloge__items{
+        grid-template-columns: repeat(5, 1fr);
+        grid-gap: 65px 45px;
+    }
+}
+
+@media(max-width: 768px) {
+    .brandsCataloge__items{
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 65px 45px;
+    }
+}
+
+@media(max-width: 475px) {
+    .brandsCataloge__items{
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 55px 45px;
+    }
+}

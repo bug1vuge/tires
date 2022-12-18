@@ -1,0 +1,156 @@
+.callbackModalWrap{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+
+    width: 100%;
+    height: 100vh;
+
+    opacity: 0;
+    visibility: hidden;
+    transition: all .2s ease;
+}
+
+.callbackModalWrap.visible{
+    opacity: 1;
+    visibility: visible;
+    transition: all .3s ease;
+}
+
+.callbackModalOverlay{
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0, 0, 0, 0.5);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+
+.callbackModal{
+    max-width: 500px;
+    width: 100%;
+    background: #FFFFFF;
+    padding: 40px;
+}
+
+.callbackModal__title{
+    font-weight: 800;
+    font-size: 24px;
+    color: #112120;
+    margin-bottom: 15px;
+}
+
+.callbackModal__subtitle{
+    font-size: 14px;
+    color: #112120;
+    margin-bottom: 20px;
+}
+
+.callbackModal__inputWrap{
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.callBackModal__input{
+    width: 100%;
+    height: 40px;
+
+    padding: 0 22px;
+    outline: none;
+    cursor: pointer;
+    background: #FFFFFF;
+    border: 1px solid #E1E1E1;
+
+    font-size: 16px;
+    color: #112120;
+}
+
+.callBackModal__input::placeholder{
+    font-size: 16px;
+    color: #B2B2B2;
+}
+
+.callbackModal__buttons{
+    display: flex;
+    align-items: center;
+    gap: 0 20px;
+    margin-bottom: 20px;
+}
+
+.callbackModal__submitButton{
+    max-width: 240px;
+    width: 100%;
+    height: 45px;
+
+    background: #1F5E37;
+    border-radius: 3px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    padding: 0;
+
+    font-weight: 600;
+    font-size: 16px;
+    color: #FFFFFF;
+}
+
+.callBackModal__closeModalButton{
+    max-width: 160px;
+    width: 100%;
+    height: 45px;
+    
+    background: #FFFFFF;
+
+    cursor: pointer;
+    border: none;
+    outline: none;
+    padding: 0;
+
+    font-weight: 600;
+    font-size: 16px;
+    color: #ACACAC;
+}
+
+.callbackModal__warning{
+    font-size: 12px;
+    letter-spacing: -0.025em;
+    color: #8A8A8A;
+}
+
+
+@media(max-width: 768px) {
+    .callbackModal{
+        padding: 24px 20px;
+    }
+
+    .callbackModal__title{
+        font-size: 22px;
+    }
+
+    .callbackModal__submitButton{
+        font-size: 14px;
+    }
+
+    .callBackModal__closeModalButton{
+        font-size: 14px;
+    }
+
+    .callBackModal__input{
+        font-size: 14px;
+    }
+}
+
+@media(max-width: 475px) {
+    .callbackModal__buttons{
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px 0;
+    }
+
+}

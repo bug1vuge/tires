@@ -1,0 +1,27 @@
+.searchResults__list{
+    margin-top: 50px;
+}
+
+.searchResults__listItem{
+    margin-bottom: 30px;
+}
+
+.searchResults__listItem:last-child{
+    margin-bottom: 0;
+}
+
+.searchResults__listLink{
+    font-size: 18px;
+    text-decoration-line: underline;
+    color: #112120;
+}
+
+@media(max-width: 768px) {
+    .searchResults__listItem{
+        margin-bottom: 25px;
+    }
+
+    .searchResults__listLink{
+        font-size: 16px;
+    }
+}

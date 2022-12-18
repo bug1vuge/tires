@@ -1,0 +1,254 @@
+.footer {
+    background: #F6F6F7;
+}
+
+.footer__inner {
+    padding: 0 55px;
+}
+
+.footer__top {
+    padding: 40px 0 90px;
+}
+
+.footer__items {
+    display: flex;
+    align-items: flex-start;
+}
+
+.footer__item:nth-child(1) {
+    max-width: 360px;
+    width: 100%;
+}
+
+.footer__item:nth-child(2) {
+    margin-left: auto;
+    margin-right: 100px;
+}
+
+.footer__item {
+    max-width: 230px;
+    width: 100%;
+}
+
+.footer__item-title {
+    font-size: 20px;
+    color: #333333;
+    margin-bottom: 30px;
+}
+
+.footer__item-wrapper {
+    display: flex;
+    align-items: flex-start;
+    gap: 0 100px;
+}
+
+
+
+.footer__item-linkWrap {
+    margin-bottom: 15px;
+}
+
+.footer__item-link {
+    font-size: 14px;
+    color: #333333;
+}
+
+.footer__contacts-wrap {
+    margin-top: 25px;
+}
+
+.footer__contacts-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0 10px;
+    margin-bottom: 15px;
+}
+
+.footer__contacts-item:last-child {
+    margin-bottom: 0;
+}
+
+.footer__contacts-timetableIcon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3px;
+}
+
+.footer__contacts-timetableText {
+    width: 120px;
+}
+
+.footer__contacts-emailIcon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2px;
+}
+
+.footer__contacts-emailLink {
+    font-weight: 500;
+    font-size: 14px;
+    color: #333333;
+}
+
+
+.footer__bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 70px;
+}
+
+.footer__dec-text,
+.footer__paymentInfo-title {
+    color: #333333;
+}
+
+.footer__paymentInfo {
+    display: flex;
+    align-items: center;
+    gap: 0 42px;
+}
+
+.footer__paymentInfo-items {
+    display: flex;
+    align-items: center;
+    gap: 0 60px;
+}
+
+
+.footer__item .-js-showElemIcon{
+    display: none;
+}
+
+
+@media(max-width: 1280px) {
+    .footer__inner {
+        padding: 0 20px;
+    }
+
+    .footer__item-wrapper {
+        gap: 0 60px;
+    }
+
+    .footer__item:nth-child(2) {
+        margin-right: 70px;
+    }
+
+    .footer__dec-text {
+        max-width: 220px;
+        line-height: 1.4;
+    }
+}
+
+@media(max-width: 1024px) {
+
+    .footer__top {
+        padding-bottom: 30px;
+    }
+
+    .footer__items {
+        display: block;
+    }
+
+    .footer__item:nth-child(2) {
+        margin: 0;
+    }
+
+    .footer__item-wrapper {
+        display: block;
+    }
+
+    .footer__item-title {
+        margin-bottom: 20px;
+    }
+
+    .footer__bottom {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .footer__paymentInfo-items {
+        gap: 0 30px;
+    }
+
+    .footer__paymentInfo {
+        order: -1;
+        display: block;
+        margin-bottom: 30px;
+    }
+
+    .footer__paymentInfo-title {
+        margin-bottom: 12px;
+    }
+
+    .footer__item .-js-showElem{
+        max-height: 0;
+        opacity: 0;
+        overflow: hidden;
+        transition: all 0.5s ease;
+    }
+
+    .footer__item.isActive .-js-showElem{
+        opacity: 1;
+        visibility: visible;
+        transition: all 0.5s ease-in-out;
+        margin-top: 30px;
+    }
+
+    .footer__item-title{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 0;
+    }
+
+    .footer__item-title .-js-showElemIcon{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .footer__item{
+        padding: 20px 0;
+        border-bottom: 1px solid #9C9C9C;
+    }
+
+    .footer__item:nth-child(1){
+        max-width: 400px;
+        padding-top: 0;
+    }
+
+    .footer__item:nth-child(2){
+        max-width: 400px;
+    }
+
+    .footer__item:nth-child(3){
+        max-width: 400px;
+        border-bottom: none;
+        padding-bottom: 0;
+    }
+
+    .footer__item:nth-child(3) .footer__item-title{
+        margin-bottom: 30px;
+    }
+
+    .footer__item .callbackModal-btn{
+        max-width: 200px;
+    }
+}
+
+@media(max-width: 768px){
+    .footer__inner{
+        padding: 0;
+    }
+
+    .footer__item .phone-number{
+        font-size: 22px;
+    }
+
+    .footer__bottom{
+        padding-bottom: 40px;
+    }
+}

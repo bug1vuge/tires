@@ -1,0 +1,156 @@
+.catalogeFilters{
+    display: flex;
+    align-items: center;
+    gap: 0 30px;
+    margin: 50px 0 40px;
+}
+
+.catalogeFilter{
+    display: flex;
+    align-items: center;
+    gap: 0 25px;
+    position: relative;
+}
+
+.catalogeFilter__title{
+    color: #9C9C9C;
+}
+
+.catalogeFilter__selectTrigger{
+    color: #1F5E37;
+    cursor: pointer;
+}
+
+.catalogeFilter:nth-child(1) .catalogeFilter__selectTrigger{
+    min-width: 150px;
+}
+
+
+
+.catalogeFilter__selectList{
+    position: absolute;
+    top: -24px;
+    z-index: 2;
+    background: #FCFCFC;
+    border: 1px solid #F5F5F5;
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.04);
+    border-radius: 2px;
+    padding: 20px 0;
+
+    display: none;
+}
+
+.catalogeFilter__selectList.visible{
+    display: block;
+}
+
+.catalogeFilter__selectList.-sort{
+    right: -7px;
+}
+
+.catalogeFilter__selectList.-show{
+    right: -18px;
+}
+
+.catalogeFilter__selectItem{
+    padding: 0 20px;
+    transition: all .4s ease;
+    cursor: pointer;
+
+    font-size: 14px;
+    color: #112120;
+
+    height: 24px;
+
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.catalogeFilter__selectItem:hover{
+    background: #F5F5F5;
+    color: #1F5E37;
+    transition: all .4s ease;
+}
+
+.catalogeFilter__selectItem.isActive{
+    font-weight: 500;
+}
+
+.catalogeFilter__selectItem.isActive::before{
+    content: url('../../images/icons/tick.svg');
+    position: absolute;
+    left: 8px;
+    top: 1px;
+}
+
+
+
+
+@media(max-width: 768px){
+    .catalogeFilters{
+        margin: 50px 0;
+    }
+
+    .catalogeFilter{
+        gap: 0 15px;
+    }
+
+    .catalogeFilter__title{
+        font-size: 14px;
+    }
+
+    .catalogeFilter__selectTrigger{
+        font-size: 14px;
+    }
+
+    .catalogeFilter__selectList{
+        right: -3px;
+    }
+}
+
+@media(max-width: 475px) {
+    .catalogeFilter{
+        gap: 0;
+    }
+
+    .catalogeFilter{
+        gap: 0 5px;
+    }
+
+    .catalogeFilter__title{
+        font-size: 12px;
+    }
+
+    .catalogeFilter:nth-child(1) .catalogeFilter__selectTrigger{
+        min-width: 120px;
+    }
+
+    .catalogeFilter__selectTrigger{
+        font-size: 12px;
+    }
+
+    .catalogeFilter__selectList{
+        padding: 5px 0;
+        top: -10px;
+    }
+
+    .catalogeFilter__selectList.-sort{
+        right: -7px;
+    }
+
+    .catalogeFilter__selectList.-show{
+        right: -17px;
+    }
+
+    .catalogeFilter__selectItem{
+        font-size: 12px;
+        padding: 0 14px;
+    }
+
+    .catalogeFilter__selectItem.isActive::before{
+        top: 4px;
+        left: 5px;
+    }
+}
+

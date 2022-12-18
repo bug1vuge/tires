@@ -1,0 +1,134 @@
+.productImage {
+    width: 100%;
+    height: 240px;
+    margin-bottom: 28px;
+}
+
+.productImage img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.productTitle {
+    font-weight: 700;
+    font-size: 18px;
+    color: #112120;
+
+    margin-bottom: 21px;
+}
+
+.productWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 25px;
+    gap: 0 10px;
+}
+
+.productPrice {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    color: #112120;
+    flex-shrink: 0;
+}
+
+.productCounter {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-shrink: 1;
+
+    max-width: 120px;
+    width: 100%;
+    height: 40px;
+
+    background: #FFFFFF;
+    border: 1px solid #E3E3E3;
+    border-radius: 3px;
+}
+
+.productCounter__decButton,
+.productCounter__incButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+
+    width: 38px;
+    height: 100%;
+
+    cursor: pointer;
+}
+
+.productCounter__value {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 100%;
+    width: 100%;
+
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    color: #1F5E37;
+}
+
+.productButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0 10px;
+
+    width: 100%;
+    height: 55px;
+
+    background: #1F5E37;
+    border-radius: 3px;
+
+    font-weight: 600;
+    font-size: 16px;
+    color: #FFFFFF;
+    transition: all .4s ease;
+}
+
+.productButton:hover{
+    background: #428E5F;
+    transition: all .4s ease;
+}
+
+.productButton__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+@media(max-width: 1280px){
+    .productTitle{
+        font-size: 16px;
+    }
+
+    .productPrice{
+        font-size: 20px;
+    }
+}
+
+@media(max-width: 1024px){
+    .productImage{
+        height: 200px;
+    }
+
+    .productButton:hover{
+        background: #1F5E37;
+    }
+}
+
+@media(max-width: 768px){
+    .productButton{
+        font-size: 14px;
+    }
+}

@@ -1,0 +1,46 @@
+.breadcrums{
+    margin: 40px 0;
+}
+
+.breadcrumsItems{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 13px;
+}
+
+.breadcrumsItem{
+    position: relative;
+}
+
+.breadcrumsItem::after{
+    content: url('../../images/icons/breadcrums-icon.svg');
+    position: absolute;
+    top: 50%;
+    right: -10px;
+    transform: translateY(-50%);
+}
+
+.breadcrumsItem:last-child::after{
+    display: none;
+}
+
+.breadcrumsItem:last-child .breadcrumsItem__link{
+    color: #383838;
+}
+
+.breadcrumsItem__link{
+    color: #9C9C9C;
+}
+
+@media(max-width: 1024px) {
+    .breadcrums{
+        margin: 30px 0;
+    }
+}
+
+@media(max-width: 768px) {
+    .breadcrumsItem__link{
+        font-size: 14px;
+    }
+}

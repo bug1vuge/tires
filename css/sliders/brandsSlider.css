@@ -1,0 +1,48 @@
+.brands__inner{
+    position: relative;
+}
+
+.brandsSlider__wrapper{
+    align-items: center;
+}
+
+.brandsSlider__button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 28px;
+    height: 28px;
+
+    border-radius: 50%;
+    border: 1px solid #1F5E37;
+
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.brandsSlider__button.-prev{
+    left: 0;
+}
+
+.brandsSlider__button.-next{
+    right: 0;
+}
+
+.brandsSlider__button.swiper-button-disabled{
+    border-color: #E9E9E9;
+}
+
+.brandsSlider__button.swiper-button-disabled svg path{
+    fill: #E9E9E9;
+}
+
+.brandsSlider__button.-prev svg{
+    margin-right: 2px;
+}
+
+.brandsSlider__button.-next svg{
+    margin-left: 2px;
+}
