@@ -93,6 +93,7 @@
     font-size: 22px;
     text-decoration-line: underline;
     color: #112120;
+    cursor: pointer;
 }
 
 .cartInfo__totalTitle{

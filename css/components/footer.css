@@ -152,6 +152,10 @@
         display: block;
     }
 
+    .footer__item{
+        cursor: pointer;
+    }
+
     .footer__item:nth-child(2) {
         margin: 0;
     }

@@ -85,20 +85,20 @@ const showElemModule = () => {
                 const currItemContent = el.querySelector('.-js-showElem');
                 const currItemIndex = index;
 
-                if (currentBtnIndex === currItemIndex) {
-                    el.classList.toggle('isActive');
-                    currItemContent.style.maxHeight = `${currItemContent.scrollHeight}px`;
-                };
-
-                if (!el.classList.contains('isActive')) {
-                    currItemContent.style.maxHeight = `${0}px`;
-                };
-
+                if (currItemContent){
+                    if (currentBtnIndex === currItemIndex) {
+                        el.classList.toggle('isActive');
+                        currItemContent.style.maxHeight = `${currItemContent.scrollHeight}px`;
+                    };
+    
+                    if (!el.classList.contains('isActive')) {
+                        currItemContent.style.maxHeight = `${0}px`;
+                    };
+                }
             });
         })
     })
 }
-
 
 const counterModule = () => {
     const counterItems = document.querySelectorAll('.productCounter')
@@ -197,6 +197,19 @@ const showCatalogeFilters = () => {
         })
     })
 
+    document.addEventListener('click', (e) => {
+        const lists = document.querySelectorAll('.catalogeFilter__selectList')
+        const target = e.target;
+
+        if (!target.closest('.catalogeFilter')) {
+            lists.forEach(el => {
+                if (el.classList.contains('visible')) {
+                    el.classList.remove('visible')
+                }
+            });
+        }
+    })
+
     window.addEventListener('scroll', () => {
 
         const scrollFromTop = Math.ceil(window.scrollY);
@@ -249,7 +262,7 @@ const selectLocationModule = () => {
     })
 }
 
-const selectSelectModule = () => {
+const selectModule = () => {
     const selectBlocks = document.querySelectorAll('.selectionForm__selectWrap')
 
     selectBlocks.forEach(selectBlock => {
@@ -280,6 +293,26 @@ const selectSelectModule = () => {
                 list.classList.remove('visible')
             }
         })
+    })
+
+    document.addEventListener('click', (e) => {
+        const lists = document.querySelectorAll('.selectionForm__selectList')
+        const triggers = document.querySelectorAll('.selectionForm__selectTrigger')
+        const target = e.target;
+
+        if (!target.closest('.selectionForm__select')) {
+            lists.forEach(el => {
+                if (el.classList.contains('visible')) {
+                    el.classList.remove('visible')
+                }
+            });
+
+            triggers.forEach(el => {
+                if (el.classList.contains('active')) {
+                    el.classList.remove('active')
+                }
+            });
+        }
     })
 }
 
@@ -440,7 +473,6 @@ try {
         },
 
         breakpoints: {
-            // when window width is >= 320px
             325: {
                 slidesPerView: 2,
             },
@@ -448,11 +480,9 @@ try {
             475: {
                 slidesPerView: 3,
             },
-            // when window width is >= 480px
             768: {
                 slidesPerView: 5,
             },
-            // when window width is >= 640px
             1024: {
                 slidesPerView: 6,
             }
@@ -490,7 +520,7 @@ try {
 
 
 try {
-    selectSelectModule()
+    selectModule()
 } catch (error) { }
 
 
