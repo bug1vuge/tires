@@ -504,7 +504,11 @@ if (window.innerWidth >= 768) {
         item: '.product__tabsContent-item'
     })
 } else if (window.innerWidth < 768) {
-    productTabsModule()
+    try {
+        productTabsModule()
+    } catch (error) {
+        
+    }
 }
 
 

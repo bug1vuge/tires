@@ -767,11 +767,6 @@
         padding: 20px 15px 24px;
     }
 
-    .header__wrapper:nth-child(3) {
-        padding-left: 10px;
-        top: 99px;
-    }
-
     .phone-number {
         font-size: 18px;
         margin-bottom: 5px;
@@ -835,18 +830,9 @@
         height: 16px;
     }
 
-    .header__wrapper:nth-child(3){
-        top: 84px;
-    }
-    
     .burgerMenuButton{
         width: 34px;
         height: 34px;
     }
 }
 
-@media(max-width: 475px) {
-    .burgerMenu{
-        top: 86px;
-    }
-}
