@@ -1,4 +1,4 @@
-.header{
+.header {
     max-width: 1400px;
     width: 100%;
     margin-left: auto;
@@ -25,6 +25,10 @@
     background: #1F5E37;
 }
 
+.logo {
+    flex-shrink: 0;
+}
+
 .logo svg {
     width: 100%;
     height: 100%;
@@ -42,7 +46,7 @@
     color: #999999;
 }
 
-.locationSelect{
+.locationSelect {
     position: relative;
 }
 
@@ -52,7 +56,7 @@
     cursor: pointer;
 }
 
-.locationSelect__trigger.active .locationSelect__trigger-icon{
+.locationSelect__trigger.active .locationSelect__trigger-icon {
     transform: rotate(180deg);
 }
 
@@ -63,11 +67,11 @@
     min-width: 135px;
 }
 
-.burgerMenu .locationSelect__trigger{
+.burgerMenu .locationSelect__trigger {
     gap: 0 10px;
 }
 
-.burgerMenu .locationSelect__trigger-text{
+.burgerMenu .locationSelect__trigger-text {
     min-width: 0;
 }
 
@@ -78,11 +82,11 @@
     margin-bottom: 2px;
 }
 
-.burgerMenu .locationSelect__trigger-icon{
+.burgerMenu .locationSelect__trigger-icon {
     margin: 0;
 }
 
-.locationSelect__list{
+.locationSelect__list {
     background: #FCFCFC;
     border: 1px solid #F5F5F5;
     box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.04);
@@ -99,22 +103,22 @@
     display: none;
 }
 
-.locationSelect__list.visible{
+.locationSelect__list.visible {
     display: block;
 }
 
-.locationSelect .searchForm-wrap{
+.locationSelect .searchForm-wrap {
     max-width: 180px;
     margin: 0 auto;
     position: relative;
 }
 
-.locationSelect .searchForm__input{
+.locationSelect .searchForm__input {
     height: 34px;
     background: #F5F5F5;
 }
 
-.locationSelect .searchForm__submitButton{
+.locationSelect .searchForm__submitButton {
     width: 33px;
     height: 33px;
     background: #fff;
@@ -130,23 +134,23 @@
     background: #F5F5F5;
 }
 
-.locationSelect .searchForm__submitButton svg path{
+.locationSelect .searchForm__submitButton svg path {
     fill: #333333;
 }
 
-.locationSelect__listItems{
+.locationSelect__listItems {
     max-height: 228px;
     overflow: auto;
     margin-top: 20px;
 }
 
-.locationSelect .simplebar-track.simplebar-vertical{
+.locationSelect .simplebar-track.simplebar-vertical {
     width: 2px;
     background: #EBEBEB;
     border-radius: 2px;
 }
 
-.locationSelect .simplebar-scrollbar:before{
+.locationSelect .simplebar-scrollbar:before {
     opacity: 1;
     width: 2px;
     background: #1F5E37;
@@ -158,7 +162,7 @@
     bottom: 0;
 }
 
-.locationSelect__listItem{
+.locationSelect__listItem {
     padding-left: 30px;
     height: 24px;
     display: flex;
@@ -171,27 +175,28 @@
     color: #112120;
 }
 
-.locationSelect__listItem.isActive{
+.locationSelect__listItem.isActive {
     position: relative;
     font-weight: 500;
 }
 
-.locationSelect__listItem.isActive::before{
+.locationSelect__listItem.isActive::before {
     content: url('../../images/icons/tick.svg');
     position: absolute;
     left: 15px;
     top: 1px;
 }
 
-.locationSelect__listItem:last-child{
+.locationSelect__listItem:last-child {
     margin-bottom: 0;
 }
 
-.locationSelect__listItem:hover{
+.locationSelect__listItem:hover {
     color: #1F5E37;
     background: #F5F5F5;
     transition: all .3s ease;
 }
+
 /*  */
 
 .header__extraLinks {
@@ -315,8 +320,8 @@
     transition: all .4s ease;
 }
 
-.searchForm__submitButton:hover{
-    background:#428E5F;
+.searchForm__submitButton:hover {
+    background: #428E5F;
     transition: all .4s ease;
 }
 
@@ -444,18 +449,18 @@
     cursor: pointer;
 }
 
-.menu__list-item:nth-child(2):hover .submenu__list{
+.menu__list-item:nth-child(2):hover .submenu__list {
     opacity: 1;
     visibility: visible;
     transition: all .4s ease;
 }
 
-.submenu__list{
+.submenu__list {
 
     opacity: 0;
     visibility: hidden;
     transition: all .3s ease;
-    
+
     width: 337px;
     background: #428E5F;
     padding: 16px;
@@ -472,10 +477,11 @@
 
 
 
-.submenu__listLink{
+.submenu__listLink {
     font-size: 13px;
     color: #FFFFFF;
 }
+
 /*  */
 
 /* burger menu */
@@ -543,18 +549,18 @@
     fill: #fff;
 }
 
-.burgerMenu__linkWrap{
+.burgerMenu__linkWrap {
     border-bottom: 1px solid rgba(217, 217, 217, 0.3);
 }
 
-.burgerMenu__linkButton{
+.burgerMenu__linkButton {
     display: flex;
     align-items: center;
     justify-content: space-between;
     position: relative;
 }
 
-.burgerMenu__linkIcon{
+.burgerMenu__linkIcon {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -565,12 +571,12 @@
     right: 0;
 }
 
-.burgerMenu__linkButton.active .burgerMenu__linkIcon{
+.burgerMenu__linkButton.active .burgerMenu__linkIcon {
     top: 27%;
     transform: rotate(90deg);
 }
 
-.burgerMenu__link{
+.burgerMenu__link {
     display: block;
     width: 100%;
     padding: 15px 0;
@@ -642,7 +648,7 @@
     background: #fff;
 }
 
-.burgerMenu__list{
+.burgerMenu__list {
     padding-left: 20px;
 
     max-height: 0;
@@ -651,22 +657,22 @@
     transition: all 0.5s ease;
 }
 
-.burgerMenu__list.visible{
+.burgerMenu__list.visible {
     opacity: 1;
     overflow: visible;
     transition: all 0.5s ease;
     margin-bottom: 20px;
 }
 
-.burgerMenu__listItem{
+.burgerMenu__listItem {
     margin-bottom: 15px;
 }
 
-.burgerMenu__listItem:last-child{
+.burgerMenu__listItem:last-child {
     margin-bottom: 0;
 }
 
-.burgerMenu__listLink{
+.burgerMenu__listLink {
     font-size: 14px;
     color: #fff;
 }
@@ -675,18 +681,6 @@
 
 
 @media(max-width: 1280px) {
-    .header__wrapper:nth-child(1) {
-        padding-left: 20px;
-    }
-
-    .header__wrapper:nth-child(2) {
-        padding-left: 20px;
-        padding-right: 20px;
-    }
-
-    .header__wrapper:nth-child(3) {
-        padding-left: 0;
-    }
 
     .header__wrapper .callbackModal-btn {
         display: none;
@@ -702,24 +696,29 @@
 }
 
 @media(max-width: 1024px) {
-    .header__extraLinks{
+    .header__extraLinks {
         margin-left: 60px;
+    }
+
+    .menu__list-link{
+        padding: 0 19px;
     }
 }
 
-@media(max-width: 950px) {
-
+@media(max-width: 970px) {
     .header__wrapper:nth-child(1) {
         display: none;
     }
 
     .header__wrapper:nth-child(2) {
         justify-content: space-between;
+        padding-left: 20px;
+        padding-right: 20px;
     }
 
-    .header__wrapper:nth-child(3){
+    .header__wrapper:nth-child(3) {
         padding: 0 20px;
-        height: 60px;
+        height: 55px;
     }
 
 
@@ -766,11 +765,15 @@
         height: 20px;
         font-size: 10px;
     }
-} 
+}
 
 @media(max-width: 768px) {
     .header__wrapper:nth-child(2) {
         padding: 20px 15px 24px;
+    }
+
+    .header__wrapper:nth-child(3){
+        padding: 0 15px;
     }
 
     .phone-number {
@@ -840,12 +843,12 @@
         height: 16px;
     }
 
-    .burgerMenuButton{
+    .burgerMenuButton {
         width: 34px;
         height: 34px;
     }
 
-    .burgerMenu{
+    .burgerMenu {
         top: 85px;
     }
 }
