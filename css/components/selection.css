@@ -3,15 +3,19 @@
 }
 
 .selectionItems {
-    display: flex;
+    /* display: flex;
     align-items: center;
-    gap: 0 30px;
+    gap: 0 30px; */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 0 30px;
 }
 
 .selectionItem {
-    max-width: 685px;
-    width: 100%;
-    height: 400px;
+    /* max-width: 685px; */
+    /* width: 100%; */
+    /* min-height: 400px; */
+    height: 100%;
 
     padding: 25px 35px 30px 35px;
     border: 1px solid #E3E3E3;
@@ -51,6 +55,7 @@
     align-items: flex-start;
     justify-content: space-between;
     margin-bottom: 25px;
+    gap: 0 10px;
 }
 
 .selectionItem__title{
@@ -58,12 +63,14 @@
     font-size: 24px;
     letter-spacing: -0.05em;
     color: #000000;
+    flex-shrink: 1;
 }
 
 .selectionItem__tabsButtons{
     display: flex;
     align-items: center;
     gap: 0 10px;
+    flex-shrink: 0;
 }
 
 .selectionItem__tabsButton{
@@ -548,6 +555,10 @@
     display: none;
 }
 
+.selectionItem.-disk-bg .selectionForm__submitButtonWrap{
+    justify-content: flex-start;
+}
+
 @media(max-width: 1440px) {
     .selectionItem{
         padding-right: 25px;
@@ -603,26 +614,11 @@
 
 @media(max-width: 1024px) {
     .cataloge .selectionItem.-disk-bg{
-        background-size: 45%;
+        background-size: 100%;
     }
 
     .selectionItem.-car-bg{
-        order: -1;
-    }
-
-    .selectionItems{
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 45px 0;
-    }
-
-    .selectionItem{
-        max-width: 100%;
-        height: auto;
-    }
-
-    .selectionItem.-car-bg{
-        background-size: 32%;
+        background-size: 70%;
     }
 
     .selectionItem__selects{
@@ -631,40 +627,6 @@
 
     .selectionItem .selectionItem__tabsContent:nth-child(2) .selectionItem__selects{
         margin-bottom: 60px;
-    }
-
-    
-}
-
-@media(max-width: 768px) {
-    .selectionItem.-car-bg {
-        background-size: 50%;
-    }
-
-    .selectionItem__title{
-        font-size: 20px;
-    }
-
-    .selectionForm__submitButton{
-        font-size: 14px;
-    }
-
-    .selectionItem__tabsButton{
-        padding-bottom: 6px;
-    }
-}
-
-@media(max-width: 500px) {
-    .selectionItem{
-        border: none;
-        padding: 0;
-    }
-
-    .selectionItem.-tire-bg,
-    .selectionItem.-disk-bg,
-    .selectionItem.-car-bg,
-    .cataloge .selectionItem.-disk-bg{
-        background-image: none;
     }
 
     .selectionForm__selectWrap.-slash-decor::after,
@@ -680,12 +642,57 @@
     .selectionItem__selectsRow{
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        grid-gap: 15px;
     }
 
     .selectionForm__selectWrap,
     .selectionForm__inputWrap{
         width: 100%;
+    }
+
+    .selectionItem__title{
+        font-size: 18px;
+        padding-bottom: 11px;
+    }
+    
+    .selectionItem__recommendsTabs-button{
+        max-width: 130px;
+    }
+}
+
+@media(max-width: 768px) {
+
+    .selectionItems{
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 45px 0;
+    }
+
+    .selectionItem.-tire-bg,
+    .selectionItem.-disk-bg,
+    .selectionItem.-car-bg,
+    .cataloge .selectionItem.-disk-bg{
+        background-image: none;
+    }
+
+    .selectionItem{
+        border: none;
+        padding: 0;
+    }
+
+    .selectionItem.-car-bg{
+        order: -1;
+    }
+
+    .selectionItem__title{
+        font-size: 16px;
+        padding-bottom: 0;
+    }
+
+    .selectionForm__submitButton{
+        font-size: 14px;
+    }
+
+    .selectionItem__tabsButton{
+        padding-bottom: 6px;
     }
 
     .selectionForm__submitButtonWrap{
@@ -697,6 +704,10 @@
     }
 
     .cataloge .selectionItem.-car-bg .selectionItem__tabsContent .selectionForm__submitButtonWrap{
+        justify-content: center;
+    }
+
+    .selectionItem.-disk-bg .selectionForm__submitButtonWrap{
         justify-content: center;
     }
 
@@ -714,6 +725,10 @@
     .cataloge .selectionItem .selectionItem__tabsContent .selectionItem__selects{
         margin-bottom: 25px;
     }
+}
+
+@media(max-width: 500px) {
+
 
     .selectionItem__title{
         font-size: 16px;
