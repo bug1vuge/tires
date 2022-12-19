@@ -489,7 +489,7 @@ try {
                 pagination: false,
             },
             // when window width is >= 640px
-            1024: {
+            1030: {
                 pagination: {
                     el: '.swiper-pagination',
                 },
@@ -528,7 +528,6 @@ try {
 
 try {
     new Swiper('.-js-benefitsSlider', {
-        spaceBetween: 25,
 
         pagination: {
             el: '.benefitsSlider__pagination',
@@ -537,14 +536,34 @@ try {
         breakpoints: {
 
             320: {
+                enabled: true,
                 slidesPerView: 1
             },
 
+            600: {
+                slidesPerView: 2,
+                spaceBetween: 20
+            },
+
             768: {
-                slidesPerView: 2
+                enabled: true,
+                slidesPerView: 2,
+                spaceBetween: 20,
+            },
+
+            861: {
+                enabled: false,
+                slidesPerView: 4,
+                spaceBetween: 20,
             },
 
             1024: {
+                enabled: false,
+                slidesPerView: 4,
+                spaceBetween: 20,
+            },
+
+            1260: {
                 enabled: false,
                 slidesPerView: 4,
                 spaceBetween: 40,
@@ -560,7 +579,7 @@ try {
 } catch (error) { }
 
 
-if (window.innerWidth <= 1024) {
+if (window.innerWidth <= 680) {
     showElemModule();
 }
 
@@ -572,9 +591,7 @@ if (window.innerWidth >= 768) {
 } else if (window.innerWidth < 768) {
     try {
         productTabsModule()
-    } catch (error) {
-
-    }
+    } catch (error) { }
 }
 
 

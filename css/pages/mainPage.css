@@ -33,7 +33,7 @@
     flex-direction: column;
     align-items: center;
 
-    height: 220px;
+    height: 230px;
 
     background: #F6F6F7;
     border-radius: 3px;
@@ -150,6 +150,19 @@
     }
 }
 
+@media(max-width: 1260px) {
+    .benefitsItem{
+        padding: 20px 15px;
+    }
+
+    .benefitsItem__icon{
+        width: 70px;
+        height: 70px;
+        margin-bottom: 25px;
+    }
+}
+
+
 @media(max-width: 1024px){
     .m-p-slider{
         height: 360px;
@@ -160,6 +173,21 @@
     .benefitsTitle{
         margin-bottom: 30px;
     }
+
+    .benefitsItem{
+        height: 220px;
+        padding: 20px 5px;
+    }
+
+    .benefitsItem__title{
+        font-size: 16px;
+    }
+
+    .benefitsItem__subtitle{
+        font-size: 14px;
+    }
+
+
     /*  */
 
     /* about company */
@@ -169,11 +197,14 @@
     /*  */
 }
 
+@media(max-width: 860px) {
+    .benefitsItem{
+        height: 190px;
+    }
+}
+
 @media(max-width: 768px) {
     /* benefits */
-    .benefitsItem{
-        height: 180px;
-    }
 
     .benefitsItem__icon{
         width: 70px;

@@ -559,6 +559,10 @@
     justify-content: flex-start;
 }
 
+.cataloge .selectionItem.-disk-bg .selectionForm__submitButtonWrap{
+    justify-content: flex-end;
+}
+
 @media(max-width: 1440px) {
     .selectionItem{
         padding-right: 25px;
@@ -622,7 +626,7 @@
     }
 
     .selectionItem__selects{
-        margin-bottom: 60px;
+        margin-bottom: 0;
     }
 
     .selectionItem .selectionItem__tabsContent:nth-child(2) .selectionItem__selects{
@@ -639,6 +643,26 @@
         content: '-';
     }
 
+    .selectionForm__selectWrap,
+    .selectionForm__inputWrap{
+        width: 110px;
+    }
+
+    .selectionItem__title{
+        font-size: 18px;
+        padding-bottom: 11px;
+    }
+    
+    .selectionItem__recommendsTabs-button{
+        max-width: 130px;
+    }
+
+    .selectionItem.-tire-bg .selectionItem__selectsRow{
+        margin-bottom: 110px;
+    }
+}
+
+@media(max-width: 970px) {
     .selectionItem__selectsRow{
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -649,13 +673,8 @@
         width: 100%;
     }
 
-    .selectionItem__title{
-        font-size: 18px;
-        padding-bottom: 11px;
-    }
-    
-    .selectionItem__recommendsTabs-button{
-        max-width: 130px;
+    .selectionItem.-tire-bg .selectionItem__selectsRow{
+        margin-bottom: 40px;
     }
 }
 
@@ -679,7 +698,7 @@
     }
 
     .selectionItem.-car-bg{
-        order: -1;
+        background-size: 70%;
     }
 
     .selectionItem__title{
@@ -724,6 +743,10 @@
     }
     .cataloge .selectionItem .selectionItem__tabsContent .selectionItem__selects{
         margin-bottom: 25px;
+    }
+
+    .selectionItem__selectsRow {
+        grid-gap: 20px 15px;
     }
 }
 

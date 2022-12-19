@@ -144,6 +144,57 @@
 
 @media(max-width: 1024px) {
 
+
+}
+
+@media(max-width: 920px) {
+    .footer__items{
+        justify-content: space-between;
+    }
+
+    .footer__item-wrapper{
+        gap: 0 20px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .footer__item:nth-child(1){
+        max-width: fit-content;
+    }
+
+    .footer__item:nth-child(2){
+        margin: 0;
+        margin-left: 0;
+    }
+}
+
+@media(max-width: 768px){
+    .footer__inner{
+        padding: 0;
+    }
+
+    .footer__item .phone-number{
+        font-size: 22px;
+    }
+
+    .footer__bottom{
+        padding-bottom: 40px;
+    }
+}
+
+@media(max-width: 680px) {
+    .footer__dec-text, .footer__paymentInfo-title{
+        font-size: 14px;
+    }
+
+    .footer__bottom{
+        padding-bottom: 40px;
+    }
+
+    .footer__paymentInfo-items{
+        gap: 0 40px;
+    }
+
     .footer__top {
         padding-bottom: 30px;
     }
@@ -224,16 +275,16 @@
     }
 
     .footer__item:nth-child(1){
-        max-width: 400px;
+        max-width: 100%;
         padding-top: 0;
     }
 
     .footer__item:nth-child(2){
-        max-width: 400px;
+        max-width: 100%;
     }
 
     .footer__item:nth-child(3){
-        max-width: 400px;
+        max-width: 100%;
         border-bottom: none;
         padding-bottom: 0;
     }
@@ -244,19 +295,5 @@
 
     .footer__item .callbackModal-btn{
         max-width: 200px;
-    }
-}
-
-@media(max-width: 768px){
-    .footer__inner{
-        padding: 0;
-    }
-
-    .footer__item .phone-number{
-        font-size: 22px;
-    }
-
-    .footer__bottom{
-        padding-bottom: 40px;
     }
 }
