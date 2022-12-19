@@ -121,7 +121,7 @@
 
 @media(max-width: 1024px){
     .productImage{
-        height: 200px;
+        height: 160px;
     }
 
     .productButton:hover{

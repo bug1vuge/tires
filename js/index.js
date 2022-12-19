@@ -583,12 +583,12 @@ if (window.innerWidth <= 680) {
     showElemModule();
 }
 
-if (window.innerWidth >= 768) {
+if (window.innerWidth >= 960) {
     tabsModule({
         button: '.product__tabsButton',
         item: '.product__tabsContent-item'
     })
-} else if (window.innerWidth < 768) {
+} else if (window.innerWidth < 960) {
     try {
         productTabsModule()
     } catch (error) { }
