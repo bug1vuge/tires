@@ -177,10 +177,17 @@ const showCatalogeFilters = () => {
 
             const trigger = filter.querySelector('.catalogeFilter__selectTrigger')
             const list = filter.querySelector('.catalogeFilter__selectList')
+            const lists = document.querySelectorAll('.catalogeFilter__selectList')
             const listItems = filter.querySelectorAll('.catalogeFilter__selectItem')
             const target = e.target
 
+
+
             if (target.classList.contains('catalogeFilter__selectTrigger')) {
+                lists.forEach(el => {
+                    el.classList.remove('visible')
+                })
+            
                 list.classList.add('visible')
             }
 
@@ -585,10 +592,5 @@ tabsModule({
     button: '.selectionItem__recommendsTabs-button',
     item: '.selectionItem__recommendsTabs-content'
 })
-
-
-
-
-
 
 selectLocationModule()
